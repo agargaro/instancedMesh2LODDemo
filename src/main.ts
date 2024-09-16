@@ -37,8 +37,6 @@ scene.add(camera, instancedMeshLOD, new AmbientLight('white', 0.3));
 const dirLight = new DirectionalLight('white', 2).translateZ(100).translateY(20);
 camera.add(dirLight, dirLight.target);
 
-scene.on('animate', () => console.log(camera.children[0].matrixWorld))
-
 main.createView({ scene, camera, enabled: false });
 
 const gui = new GUI();
