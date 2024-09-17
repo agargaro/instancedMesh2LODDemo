@@ -32,6 +32,11 @@ instancedMeshLOD.updateInstances((object, index) => {
 
 instancedMeshLOD.computeBVH();
 
+instancedMeshLOD.levels[0].object.renderOrder = 0;
+instancedMeshLOD.levels[1].object.renderOrder = 1;
+instancedMeshLOD.levels[2].object.renderOrder = 2;
+instancedMeshLOD.levels[3].object.renderOrder = 3;
+
 scene.add(camera, instancedMeshLOD, new AmbientLight('white', 0.3));
 
 const dirLight = new DirectionalLight('white', 2).translateZ(100).translateY(20);
